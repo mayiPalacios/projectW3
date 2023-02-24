@@ -7,6 +7,7 @@
 
 body {
     margin: 0;
+    width: 100%;
 }
 
 .container__logo img {
@@ -23,6 +24,16 @@ body {
 
 .form__header div {
     margin-bottom: 12px;
+}
+
+.btn__add--element img {
+    height: 7vh;
+    position: sticky;
+}
+
+.btn__add--element {
+    position: sticky;
+    display: flex;
 }
 
 #inpt__search {
@@ -48,4 +59,109 @@ body {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+/*   cards     */
+.card {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 0fr);
+    grid-template-rows: 1fr repeat(2, 0fr) 1fr 0fr;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    margin: 1.5rem;
+    overflow: hidden;
+    width: 26rem;
+    height: 30vh;
+}
+
+.container__cards {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card img {
+    width: 100%;
+    height: 20vh;
+    grid-area: 1 / 1 / 2 / 2;
+    background-repeat: no-repeat;
+}
+
+.card h2 {
+    grid-area: 4 / 1 / 5 / 2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    font-size: 1.4em;
+}
+
+.container__alert {
+    font-family: "Roboto", sans-serif;
+    margin: 10vh 35vw;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    display: flex;
+}
+
+.alert__content {
+
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px 30px 70px;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+
+}
+
+.alert__content button.close {
+    width: 30px;
+    font-size: 20px;
+    color: #c0c5cb;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.alert__content img {
+    width: 82px;
+    margin-bottom: 15px;
+}
+
+.alert__content p {
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.alert__content button.btn__accept {
+    background-color: #ed6755;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    padding: 14px;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);
+}
+
+.btn__accept:hover {
+    cursor: pointer;
 }
