@@ -8,6 +8,7 @@
 body {
     margin: 0;
     width: 100%;
+    height: 100vh;
 }
 
 .container__logo img {
@@ -28,12 +29,16 @@ body {
 
 .btn__add--element img {
     height: 7vh;
-    position: sticky;
+    z-index: 10;
 }
 
 .btn__add--element {
-    position: sticky;
-    display: flex;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    position: fixed;
+
 }
 
 #inpt__search {
