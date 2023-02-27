@@ -1,7 +1,6 @@
 .container__logo {
     width: 100%;
     display: flex;
-
     background-color: #e7000a;
 }
 
@@ -69,8 +68,8 @@ body {
 /*   cards     */
 .card {
     display: grid;
-    grid-template-columns: 1fr repeat(4, 0fr);
-    grid-template-rows: 1fr repeat(2, 0fr) 1fr 0fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     background-color: #fff;
     border-radius: 1rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
@@ -81,7 +80,7 @@ body {
 }
 
 .container__cards {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 
 }
@@ -100,11 +99,29 @@ body {
     background-repeat: no-repeat;
 }
 
-.card h2 {
-    grid-area: 4 / 1 / 5 / 2;
+
+
+.card .container__btn--title {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 10px;
-    font-size: 1.4em;
+    grid-area: 5 / 1 / 6 / 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn__more--info{
+    
+
+    
+}
+.btn__more--info img{
+    padding-top: 5px;
+    font-size: 6px;
+    height: 50px;
+
+    
+}
+.btn__more--info:hover{
+    cursor: pointer;
 }
 
 .container__alert {

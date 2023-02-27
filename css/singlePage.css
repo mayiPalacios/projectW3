@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+}
+
+.container__logo {
+    width: 100%;
+    display: flex;
+    background-color: #e7000a;
+}
+
+.container__logo img {
+    height: 7vh;
+}
+
+main {
+    background-image: url("https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,h_513,w_336/dpr_2.0/ncom/My%20Nintendo%20Store/EN-US/MNS%20HOME/Characters/Ncom_1048x1600_MyN_chara_nav_bg");
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.card {
+    opacity: .5;
+    height: 80vh;
+    width: 60vw;
+    background-color:#1da9f0;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+    margin: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    gap: 80px;
+}
+
+.comments {
+    height: 80vh;
+    width: 30vw;
+    opacity: 0.8;
+    background-color:#98d4f3;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+    margin: 1.5rem;
+}
+
+.container__input--comments{
+
+}
+.container__input--comments button{
+    background-color: #1da9f0;
+     margin-left: 2em;
+    height: 4vh;
+    width: 7vw;
+    border-radius: 0.5em;
+}
+
+.container__input--comments button:hover{
+     cursor: pointer;
+}
+.container__input--comments textarea{
+    width: 25vw;
+    height: 12vh;
+}
+.container__input--comments img{
+    height: 8vh;
+    width: 12vw;
+}
+
+footer{
+    height: 6vh;
+    background-image: url("https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,h_513,w_336/dpr_2.0/ncom/My%20Nintendo%20Store/EN-US/MNS%20HOME/Characters/Ncom_1048x1600_MyN_chara_nav_bg");
+}
+
+.img__circle{
+    width:300px;
+    height:300px;
+    border-radius:150px;
+}

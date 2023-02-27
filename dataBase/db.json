@@ -9,7 +9,10 @@
       "createDate": "2018/06/18",
       "likes": 12,
       "author": 3,
-      "tags": [1, 6]
+      "tags": [
+        1,
+        6
+      ]
     },
     {
       "id": 2,
@@ -20,7 +23,10 @@
       "createDate": "2018/11/20",
       "likes": 2,
       "author": 1,
-      "tags": [1, 2]
+      "tags": [
+        1,
+        2
+      ]
     },
     {
       "id": 3,
@@ -31,7 +37,10 @@
       "createDate": "2018/10/18",
       "likes": 3,
       "author": "3",
-      "tags": [2, 3]
+      "tags": [
+        2,
+        3
+      ]
     },
     {
       "id": 4,
@@ -42,7 +51,12 @@
       "createDate": "2018/10/17",
       "likes": 7,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "id": 5,
@@ -53,7 +67,12 @@
       "createDate": "2018/06/12",
       "likes": 7,
       "author": 2,
-      "tags": [2, 3, 4, 6]
+      "tags": [
+        2,
+        3,
+        4,
+        6
+      ]
     },
     {
       "id": 6,
@@ -64,7 +83,12 @@
       "createDate": "2018/10/28",
       "likes": 7,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "id": 7,
@@ -75,7 +99,12 @@
       "createDate": "2018/06/20",
       "likes": 7,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "id": 9,
@@ -86,7 +115,12 @@
       "createDate": "2018/09/10",
       "likes": 7,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "id": 10,
@@ -97,7 +131,12 @@
       "createDate": "2018/10/03",
       "likes": 7,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "id": 11,
@@ -108,7 +147,12 @@
       "createDate": "2018/08/30",
       "likes": 7,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "title": "Peach",
@@ -118,8 +162,28 @@
       "createDate": "2019/07/12",
       "likes": 1,
       "author": 2,
-      "tags": [1, 2, 3],
+      "tags": [
+        1,
+        2,
+        3
+      ],
       "id": 12
+    },
+    {
+      "id": 712,
+      "image": "https://images.unsplash.com/photo-1511882150382-421056c89033?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      "title": "pruebatag",
+      "subTitle": "",
+      "author": "2",
+      "date": "26-2-2023-18-35",
+      "body": "bladij sdhsidj sjijd",
+      "tags": [
+        2,
+        3,
+        6
+      ],
+      "likes": 0,
+      "subtitle": "oruebasjs"
     }
   ],
   "tags": [

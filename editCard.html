@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="/css/editCard.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container__logo">
+        <img src="img/Nintendo.svg.png" alt="" />
+      </div>
+    </header>
+
+    <main>
+      <div class="fish" id="fish"><img
+        src="https://cdn-icons-png.flaticon.com/512/704/704845.png"
+        alt="cookies-img"
+      /></div>
+      <div class="container__form flex-inputs">
+        <div class="form__container--columns">
+          <div class="form__child--column">
+            <div class="formgroup">
+              <label for="image">Image*</label>
+              <input
+                class="inpt__type--text"
+                type="text"
+                id="image"
+                name="image"
+              />
+            </div>
+            <div class="formgroup">
+              <label for="name">Title*</label>
+              <input
+                class="inpt__type--text"
+                type="text"
+                id="title"
+                name="name"
+              />
+            </div>
+            <div class="formgroup">
+              <label for="subtitle">Subtitle*</label>
+              <input
+                class="inpt__type--text"
+                type="text"
+                id="subtitle"
+                name="subtitle"
+              />
+            </div>
+            <div class="formgroup">
+              <label for="subtitle">Description*</label
+              ><textarea name="body" id="description"></textarea>
+            </div>
+            <div class="select__box">
+              <select id="select__author">
+                <option value="1">Jonh Wick</option>
+                <option value="2">Jonh Cena</option>
+                <option value="3">Bruce Wayne</option>
+              </select>
+            </div>
+        </div>
+        <div id="checkboxes">
+          <ul>
+            <li><input class="checkbox" type="checkbox" value= 1 />Animals</li>
+            <li><input class="checkbox" type="checkbox"  value="2"/>Nature</li>
+            <li><input class="checkbox" type="checkbox"  value="3"/>Food</li>
+            <li><input class="checkbox" type="checkbox" value="4"/>Life style</li>
+            <li><input class="checkbox" type="checkbox" value="5"/>Travel</li>
+            <li><input class="checkbox" type="checkbox" value="6"/>Sports</li>
+          </ul>
+      </div>
+      <button class="btn__accept">That's fine!</button>
+      </div>
+      <div class="btn__add--element">
+        <a href="./index.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/512/8244/8244509.png"
+            alt=""
+        /></a>
+      </div>
+
+    </main>
+    <script src="./JS/newCard.js"></script>
+  </body>
+</html>
