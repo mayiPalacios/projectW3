@@ -79,12 +79,42 @@ body {
     height: 30vh;
 }
 
+.card__feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    margin: 1.5rem;
+    overflow: hidden;
+    width: 26rem;
+    height: 30vh;
+}
+
+.btn__more--feature img {
+    padding-top: 5px;
+    font-size: 6px;
+    height: 50px;
+}
+
+.card__feature img {
+    width: 100%;
+    height: 20vh;
+    grid-area: 1 / 1 / 2 / 2;
+    background-repeat: no-repeat;
+}
+
 .container__cards {
     width: 90%;
     margin: 0 auto;
 
 }
 
+.container__feature {
+    width: 90%;
+    margin: 0 auto;
+}
 
 
 .parent {
@@ -185,3 +215,5 @@ body {
 .btn__accept:hover {
     cursor: pointer;
 }
+
+#select__tags {}

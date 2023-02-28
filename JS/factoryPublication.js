@@ -1,4 +1,4 @@
-import { singlePost, summaryPublication } from "./post.js";
+import { singlePost, summaryPublication, featuredPost } from "./post.js";
 
 export class factoryPublication {
   chooseOptionPublication(type) {
@@ -7,6 +7,9 @@ export class factoryPublication {
     }
     if (type == "publication") {
       return new summaryPublication();
+    }
+    if (type == "feature") {
+      return new featuredPost();
     }
   }
 }

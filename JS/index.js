@@ -2,6 +2,7 @@ import data from "./instance.js";
 import { getData, getNewCard } from "./helper.js";
 import { factoryPublication } from "./factoryPublication.js";
 const btnAlertContainer = document.querySelector(".container__alert");
+const selectTags = document.querySelector("#select__tags");
 const btnAlert = document.querySelector(".btn__accept");
 const urlDefaultImg =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Nintendo_Logo_2017.png/640px-Nintendo_Logo_2017.png";
@@ -9,15 +10,6 @@ const containerCards = document.querySelector(".container__cards");
 
 const inptSearch = document.querySelector("#inpt__search");
 document.addEventListener("DOMContentLoaded", () => {
-  if ("filters" in localStorage) {
-    const localStoragaData = getData();
-    console.log({ localStoragaData });
-    makeContainer();
-  } else {
-    localStorage.setItem("filters", JSON.stringify(filter));
-    makeContainer();
-  }
-
   if ("newCard" in localStorage) {
     const localStoreNewData = getNewCard();
     console.log({ localStoreNewData });
@@ -27,43 +19,65 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     localStorage.removeItem("newCard");
   }
+  regularSection();
+  createFeature();
 });
 
 const factoryPost = new factoryPublication();
 let filter = {
   search: "",
-  number: "",
 };
 
 let elementStart, limitElement;
 
-async function getLengthAPI() {
-  const apiLenght = await data.getPost("", "posts");
-  return apiLenght;
-}
-
 const createFeature = async () => {
-  elementStart = getLengthAPI() - 3;
+  const apiLenght = await data.getPost("", "posts");
+  elementStart = apiLenght.length - 3;
   limitElement = 3;
+  console.log(elementStart);
+
+  const featureFactory = await factoryPost.chooseOptionPublication("feature");
   const apiFeature = await data.getDetails(
     `_start=${elementStart}&_limit=${limitElement}`,
-    "posts"
+    "posts?"
   );
+  elementStart = 0;
+  const lastApiFeature = await data.getDetails(
+    `_start=${elementStart}&_limit=${limitElement}`,
+    "posts?"
+  );
+  lastApiFeature.forEach((element) => {
+    featureFactory.createPublication(element);
+  });
+  apiFeature.forEach((e) => {
+    featureFactory.createPublication(e);
+  });
+};
 
-  /*  
-    const apiLimits = data.getDetails(`_=start=${}&_limit=${}`);*/
+const regularSection = async () => {
+  const apiLenght = await data.getPost("", "posts");
+  elementStart = 0;
+  limitElement = apiLenght.length - 3;
+
+  const featureFactory = await factoryPost.chooseOptionPublication("single");
+  const apiFeature = await data.getDetails(
+    `_start=${elementStart}&_limit=${limitElement}`,
+    "posts?"
+  );
+  apiFeature.forEach((element) => {
+    featureFactory.createPublication(element);
+  });
 };
 
 const makeContainer = async () => {
   const localStorageData = getData();
+  console.log(typeof localStorageData.search);
   const dataCopy = await data.getPost(localStorageData.search, "posts");
   const indexPublication = await factoryPost.chooseOptionPublication("single");
   dataCopy.forEach((element) => {
     indexPublication.createPublication(element);
-
-    /* createCard(element);*/
   });
-  /* localStorage.setItem("lastID",data2[data2.length -1].posts.id);*/
+
   localStorage.setItem("lastID", Math.floor(Math.random() * 1000));
 };
 
@@ -80,22 +94,6 @@ const debounce = (fn, delay) => {
   };
 };
 
-function UpdateFilters() {
-  filter.search = "q=" + inptSearch.value;
-  filter.number = "";
-}
-
-function UpdateLocalStorage() {
-  if ("filters" in localStorage) {
-    localStorage.removeItem("filters");
-    localStorage.setItem("filters", JSON.stringify(filter));
-  } else {
-    localStorage.setItem("filters", JSON.stringify(filter));
-  }
-
-  makeContainer();
-}
-
 inptSearch.addEventListener(
   "keyup",
   debounce((e) => {
@@ -108,8 +106,9 @@ inptSearch.addEventListener(
         break;
       }
     }
-    UpdateFilters();
-    UpdateLocalStorage();
+    filter.search = "q=" + inptSearch.value;
+    localStorage.setItem("filters", JSON.stringify(filter));
+    makeContainer();
   }, 1000)
 );
 

@@ -189,16 +189,47 @@
     },
     {
       "id": 254,
-      "image": "https://images.unsplash.com/photo-1677541829506-2084c4bba14c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80",
-      "title": "Ricitos de oro",
+      "image": "https://imagenes.elpais.com/resizer/rKBoJlXoELLj3D7Yz41gU5lgLO8=/1200x675/cloudfront-eu-central-1.images.arcpublishing.com/prisa/NRIWJHZUFND3LPB35Z7OLFYLQ4.jpg",
+      "title": "Gato",
       "subTitle": "GATO CON BOTAS",
-      "author": "1",
-      "date": "28-2-2023-0-12",
-      "body": "roba comida",
+      "author": "3",
+      "date": "28-2-2023-13-33",
+      "body": "por ti baby seria batman",
       "tags": [
         1,
+        5,
+        6
+      ],
+      "likes": 0
+    },
+    {
+      "id": 525,
+      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
+      "title": "prueba",
+      "subTitle": "ESTO ES UNA PRUEBA",
+      "author": "1",
+      "date": "28-2-2023-0-45",
+      "body": "una gran prueba dhsijd dsdj djsjd",
+      "tags": [
         3,
         5
+      ],
+      "likes": 0
+    },
+    {
+      "id": 249,
+      "image": "https://i.blogs.es/6d3f9e/sonic-origins-switch/1366_2000.jpeg",
+      "title": "Sonic",
+      "subTitle": "SONIC THE DJD",
+      "author": "2",
+      "date": "28-2-2023-13-32",
+      "body": "super rapido y buen amigo",
+      "tags": [
+        1,
+        2,
+        3,
+        4,
+        6
       ],
       "likes": 0
     }
@@ -264,6 +295,12 @@
       "id": 922,
       "comment": "la emely",
       "postId": "5",
+      "user": 2
+    },
+    {
+      "id": 171,
+      "comment": "salva a zelda",
+      "postId": "7",
       "user": 2
     }
   ],
