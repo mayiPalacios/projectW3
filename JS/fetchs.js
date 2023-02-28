@@ -11,9 +11,9 @@ export default class fetchs {
     fetchs.instance = this;
   }
 
-  async getPost(filterParams) {
+  async getPost(filterParams,method) {
     try {
-      const request = await fetch(JSON_URL + "posts" + filterParams, {
+      const request = await fetch(JSON_URL + method + filterParams, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -31,12 +31,29 @@ export default class fetchs {
     }
   }
 
-  async postCard(postData, url) {
+   async getDetails(filterParams,method){
     try {
-      const response = await fetch(`${JSON_URL}${url}`, {
-        method: "POST",
+      const request = await fetch(JSON_URL + method + filterParams, {
+        method: "GET",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(postData),
+      });
+      const data = await request.json();
+      console.log(typeof data);
+      return data;
+    } catch (error) {
+      console.log(error);
+      console("oh hubo un problema");
+    }
+   }
+
+
+  async postCard(postData) {
+    try {
+      console.log({ request: true });
+      const response = await fetch(JSON_URL + "posts", {
+        method: "POST",
+        body:  JSON.stringify(postData),
+        headers: { "Content-Type": "application/json" },
       });
       const data = await response.json();
       return data;

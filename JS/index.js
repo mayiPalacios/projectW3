@@ -1,7 +1,7 @@
-import fetchs from "./fetchs.js";
-import { getData } from "./helper.js";
+import data from "./instance.js";
+import { getData, getNewCard } from "./helper.js";
+import { factoryPublication } from "./factoryPublication.js";
 const btnAlertContainer = document.querySelector(".container__alert");
-const JSON_URL = "http://localhost:3000/";
 const btnAlert = document.querySelector(".btn__accept");
 const urlDefaultImg =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Nintendo_Logo_2017.png/640px-Nintendo_Logo_2017.png";
@@ -11,16 +11,25 @@ const inptSearch = document.querySelector("#inpt__search");
 document.addEventListener("DOMContentLoaded", () => {
   if ("filters" in localStorage) {
     const localStoragaData = getData();
+    console.log({ localStoragaData });
     makeContainer();
   } else {
-    console.log(JSON.stringify(filter));
     localStorage.setItem("filters", JSON.stringify(filter));
     makeContainer();
   }
+
+  if ("newCard" in localStorage) {
+    const localStoreNewData = getNewCard();
+    console.log({ localStoreNewData });
+    localStoreNewData?.map((request) => {
+      console.log({ request });
+      data.postCard(request);
+    });
+     localStorage.removeItem("newCard");
+  }
 });
 
-const data = new fetchs(JSON_URL);
-
+const factoryPost = new factoryPublication();
 let filter = {
   search: "",
   number: "",
@@ -28,34 +37,20 @@ let filter = {
 
 const makeContainer = async () => {
   const localStorageData = getData();
-  console.log(localStorageData.search);
-  const data2 = await data.getPost(localStorageData.search);
-
+  const data2 = await data.getPost(localStorageData.search,"posts");
+  const indexPublication = await factoryPost.chooseOptionPublication("single");
   data2.forEach((element) => {
-    createCard(element);
+    indexPublication.createPublication(element);
+
+    /* createCard(element);*/
   });
+  /* localStorage.setItem("lastID",data2[data2.length -1].posts.id);*/
+  localStorage.setItem("lastID", data2[data2.length - 1].id);
 };
 
-function createCard(data) {
-  const card = document.createElement("div");
-  card.classList.add("card");
-  const tittle = document.createElement("h2");
-  tittle.textContent = `${data.title}`;
-
-  const image = document.createElement("img");
-  if (data.image == undefined) {
-    image.src = urlDefaultImg;
-  } else {
-    image.src = data.image;
-  }
-
-  card.appendChild(tittle);
-  card.appendChild(image);
-  containerCards.appendChild(card);
-}
 const debounce = (fn, delay) => {
   let timeoutID;
-  return function (...args) {
+  return function(...args) {
     if (timeoutID) {
       clearTimeout(timeoutID);
     }
