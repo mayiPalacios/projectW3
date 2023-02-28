@@ -7,20 +7,26 @@
       "image": "https://i.ytimg.com/vi/INk1W8OujQI/maxresdefault.jpg",
       "body": "Mario is an all-around fighter who uses his wide variety of techniques to respond to any situation. In Super Smash Bros. Ultimate, he shows up in his Wedding tux and his Builder outfit, and Cappy even makes an appearance!",
       "createDate": "2018/06/18",
-      "likes": 12,
+      "likes": 24,
       "author": 3,
-      "tags": [1, 6]
+      "tags": [
+        1,
+        6
+      ]
     },
     {
       "id": 2,
       "title": "Zelda",
       "subTitle": "Super Smash Bros Ultimate",
-      "image": "https://media.redadn.es/imagenes/super-smash-bros-ultimate-nintendo-switch_323927.jpg",
+      "image": "https://www.smashbros.com/assets_v2/img/fighter/zelda/ss_movie1_en.jpg",
       "body": "You might recognize Zelda's look from The Legend of Zelda: A Link Between Worlds game. In battle she uses magical moves to reflect and teleport, and for her Final Smash, she seals her opponents away in the Triforce of Wisdom. If an opponent has 100% damage or more, they will be instantly KO'd!",
       "createDate": "2018/11/20",
       "likes": 2,
       "author": 1,
-      "tags": [1, 2]
+      "tags": [
+        1,
+        2
+      ]
     },
     {
       "id": 3,
@@ -31,7 +37,10 @@
       "createDate": "2018/10/18",
       "likes": 3,
       "author": "3",
-      "tags": [2, 3]
+      "tags": [
+        2,
+        3
+      ]
     },
     {
       "id": 4,
@@ -40,9 +49,14 @@
       "image": "https://www.nintenderos.com/wp-content/uploads/2018/10/Final-Fantasy-VII.jpg",
       "body": "He's the protagonist of Final Fantasy VII. You can also select his Advent Children outfit. Charging up his Limit Gauge increases his special move abilities! Land a powerful hit!. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque massa nec malesuada interdum.",
       "createDate": "2018/10/17",
-      "likes": 7,
+      "likes": 8,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "id": 5,
@@ -51,9 +65,14 @@
       "image": "https://i.ytimg.com/vi/O4-7-bJWUsc/maxresdefault.jpg",
       "body": "Attacks with a variety of weapons. Covering opponents with ink leads to more and more damage—plus these Inklings are really fashionable! Good news: The new fighters, Inkling and Ridley, have Super Smash Bros. series amiibo figures on the way! #SmashBros",
       "createDate": "2018/06/12",
-      "likes": 7,
+      "likes": 11,
       "author": 2,
-      "tags": [2, 3, 4, 6]
+      "tags": [
+        2,
+        3,
+        4,
+        6
+      ]
     },
     {
       "id": 6,
@@ -64,7 +83,12 @@
       "createDate": "2018/10/28",
       "likes": 7,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "id": 7,
@@ -75,7 +99,12 @@
       "createDate": "2018/06/20",
       "likes": 7,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "id": 9,
@@ -86,18 +115,28 @@
       "createDate": "2018/09/10",
       "likes": 7,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "id": 10,
-      "title": "Fox",
+      "title": "new Fox",
       "subTitle": "Super Smash Bros Ultimate",
-      "image": "https://i.ytimg.com/vi/Arw6c0dJHAE/maxresdefault.jpg",
+      "image": "https://www.kotaku.com.au/wp-content/uploads/sites/3/2018/12/12/yifwpaqahlja8s7o8g7m.png",
       "body": "He can overwhelm his opponents with his quick movements, and his specials don't leave him open for counterattacks. His costume and voice have been redone to match his appearance in Star Fox Zero. This Fox is brand new! Come on!",
       "createDate": "2018/10/03",
-      "likes": 7,
-      "author": 3,
-      "tags": [4, 6, 3, 2]
+      "likes": 0,
+      "author": "2",
+      "tags": [
+        1,
+        2,
+        6
+      ],
+      "date": "27-2-2023-22-37"
     },
     {
       "id": 11,
@@ -108,7 +147,12 @@
       "createDate": "2018/08/30",
       "likes": 7,
       "author": 3,
-      "tags": [4, 6, 3, 2]
+      "tags": [
+        4,
+        6,
+        3,
+        2
+      ]
     },
     {
       "title": "Peach",
@@ -118,8 +162,76 @@
       "createDate": "2019/07/12",
       "likes": 1,
       "author": 2,
-      "tags": [1, 2, 3],
+      "tags": [
+        1,
+        2,
+        3
+      ],
       "id": 12
+    },
+    {
+      "id": 327,
+      "image": "https://images7.alphacoders.com/714/714040.jpg",
+      "title": "Kratos",
+      "subTitle": "",
+      "author": "2",
+      "date": "27-2-2023-23-15",
+      "body": "DIOS D GUERRAAA",
+      "tags": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "likes": 0,
+      "subtitle": "GOD OF WAR"
+    },
+    {
+      "id": 254,
+      "image": "https://imagenes.elpais.com/resizer/rKBoJlXoELLj3D7Yz41gU5lgLO8=/1200x675/cloudfront-eu-central-1.images.arcpublishing.com/prisa/NRIWJHZUFND3LPB35Z7OLFYLQ4.jpg",
+      "title": "Gato",
+      "subTitle": "GATO CON BOTAS",
+      "author": "3",
+      "date": "28-2-2023-13-33",
+      "body": "por ti baby seria batman",
+      "tags": [
+        1,
+        5,
+        6
+      ],
+      "likes": 0
+    },
+    {
+      "id": 525,
+      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
+      "title": "prueba",
+      "subTitle": "ESTO ES UNA PRUEBA",
+      "author": "1",
+      "date": "28-2-2023-0-45",
+      "body": "una gran prueba dhsijd dsdj djsjd",
+      "tags": [
+        3,
+        5
+      ],
+      "likes": 0
+    },
+    {
+      "id": 249,
+      "image": "https://i.blogs.es/6d3f9e/sonic-origins-switch/1366_2000.jpeg",
+      "title": "Sonic",
+      "subTitle": "SONIC THE DJD",
+      "author": "2",
+      "date": "28-2-2023-13-32",
+      "body": "super rapido y buen amigo",
+      "tags": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "likes": 0
     }
   ],
   "tags": [
@@ -172,6 +284,24 @@
       "comment": "Test comment on post #2",
       "postId": 2,
       "user": 3
+    },
+    {
+      "id": 759,
+      "comment": "probando",
+      "postId": "5",
+      "user": 1
+    },
+    {
+      "id": 922,
+      "comment": "la emely",
+      "postId": "5",
+      "user": 2
+    },
+    {
+      "id": 171,
+      "comment": "salva a zelda",
+      "postId": "7",
+      "user": 2
     }
   ],
   "authors": [

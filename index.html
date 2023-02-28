@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="shortcut icon" href="#" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
@@ -14,8 +15,14 @@
       </div>
 
       <div class="form__header">
-        <select name="" id=""></select>
-        <select name="" id=""></select>
+        <select name="" id="select__tags">
+          <option value="1">Animals</option>
+          <option value="">Nature</option>
+          <option value="">Food</option>
+          <option value="">Life style</option>
+          <option value="">Travel</option>
+          <option value="">Sports</option>
+        </select>
         <div class="inpt__wrapper">
           <input type="text" placeholder="Search" id="inpt__search" />
           <svg
@@ -35,7 +42,30 @@
     </header>
 
     <main>
-      <div class="container__cards"></div>
+      <div class="container__alert">
+        <div class="alert__content" id="cookiesPopup">
+          <button class="close">✖</button>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2731/2731811.png"
+            alt="cookies-img"
+          />
+          <p>sorry data not found, reload the page please</p>
+          <button class="btn__accept">That's fine!</button>
+        </div>
+      </div>
+
+      <div class="container__feature"></div>
+
+      <div class="container__cards parent"></div>
+      <div class="btn__add--element">
+        <a href="./editCard.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/512/6659/6659650.png"
+            alt=""
+        /></a>
+      </div>
     </main>
+
+    <script type="module" src="/JS/index.js"></script>
   </body>
 </html>
