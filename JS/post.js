@@ -5,6 +5,7 @@ const containerComments = document.querySelector(
   ".container__comments--values"
 );
 const card = document.querySelector(".card");
+const featureContainer = document.querySelector(".container__feature");
 class publication {
   createPublication() {}
 }
@@ -111,7 +112,32 @@ class summaryPublication extends publication {
 }
 
 class featuredPost {
-  createPublication() {}
+  createPublication(data) {
+    const card = document.createElement("div");
+    card.classList.add("card__feature");
+    const contBtnTitle = document.createElement("div");
+    contBtnTitle.classList.add("container__btn--title");
+    const tittle = document.createElement("h2");
+    tittle.textContent = `${data.title}`;
+    const infoBtn = document.createElement("a");
+    infoBtn.href = "../singlePage.html?id=" + `${data.id}`;
+    const imgInf = document.createElement("img");
+    imgInf.src = "https://cdn-icons-png.flaticon.com/512/8265/8265234.png";
+    infoBtn.classList.add("btn__more--feature");
+    const image = document.createElement("img");
+
+    if (data.image === "") {
+      image.src = urlDefaultImg;
+    } else {
+      image.src = data.image;
+    }
+    infoBtn.appendChild(imgInf);
+    contBtnTitle.appendChild(tittle);
+    contBtnTitle.appendChild(infoBtn);
+    card.appendChild(image);
+    card.appendChild(contBtnTitle);
+    featureContainer.appendChild(card);
+  }
 }
 
-export { singlePost, summaryPublication };
+export { singlePost, summaryPublication, featuredPost };
