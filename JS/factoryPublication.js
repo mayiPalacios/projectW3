@@ -1,13 +1,12 @@
+import { singlePost, summaryPublication } from "./post.js";
 
-import {publicationSingle, publicationResumen} from "./post.js"
-
-export class factoryPublication{
-    chooseOptionPublication(type){
-       if(type=="single"){
-           return new publicationSingle();
-   }
-   if(type=="publication"){
-                 return new publicationResumen();
-   }
+export class factoryPublication {
+  chooseOptionPublication(type) {
+    if (type == "single") {
+      return new singlePost();
     }
+    if (type == "publication") {
+      return new summaryPublication();
+    }
+  }
 }

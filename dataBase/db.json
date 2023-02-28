@@ -7,7 +7,7 @@
       "image": "https://i.ytimg.com/vi/INk1W8OujQI/maxresdefault.jpg",
       "body": "Mario is an all-around fighter who uses his wide variety of techniques to respond to any situation. In Super Smash Bros. Ultimate, he shows up in his Wedding tux and his Builder outfit, and Cappy even makes an appearance!",
       "createDate": "2018/06/18",
-      "likes": 12,
+      "likes": 24,
       "author": 3,
       "tags": [
         1,
@@ -49,7 +49,7 @@
       "image": "https://www.nintenderos.com/wp-content/uploads/2018/10/Final-Fantasy-VII.jpg",
       "body": "He's the protagonist of Final Fantasy VII. You can also select his Advent Children outfit. Charging up his Limit Gauge increases his special move abilities! Land a powerful hit!. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque massa nec malesuada interdum.",
       "createDate": "2018/10/17",
-      "likes": 7,
+      "likes": 8,
       "author": 3,
       "tags": [
         4,
@@ -65,7 +65,7 @@
       "image": "https://i.ytimg.com/vi/O4-7-bJWUsc/maxresdefault.jpg",
       "body": "Attacks with a variety of weapons. Covering opponents with ink leads to more and more damage—plus these Inklings are really fashionable! Good news: The new fighters, Inkling and Ridley, have Super Smash Bros. series amiibo figures on the way! #SmashBros",
       "createDate": "2018/06/12",
-      "likes": 7,
+      "likes": 11,
       "author": 2,
       "tags": [
         2,
@@ -124,19 +124,19 @@
     },
     {
       "id": 10,
-      "title": "Fox",
+      "title": "new Fox",
       "subTitle": "Super Smash Bros Ultimate",
-      "image": "https://i.ytimg.com/vi/Arw6c0dJHAE/maxresdefault.jpg",
+      "image": "https://www.kotaku.com.au/wp-content/uploads/sites/3/2018/12/12/yifwpaqahlja8s7o8g7m.png",
       "body": "He can overwhelm his opponents with his quick movements, and his specials don't leave him open for counterattacks. His costume and voice have been redone to match his appearance in Star Fox Zero. This Fox is brand new! Come on!",
       "createDate": "2018/10/03",
-      "likes": 7,
-      "author": 3,
+      "likes": 0,
+      "author": "2",
       "tags": [
-        4,
-        6,
-        3,
-        2
-      ]
+        1,
+        2,
+        6
+      ],
+      "date": "27-2-2023-22-37"
     },
     {
       "id": 11,
@@ -170,20 +170,37 @@
       "id": 12
     },
     {
-      "id": 712,
-      "image": "https://images.unsplash.com/photo-1511882150382-421056c89033?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-      "title": "pruebatag",
+      "id": 327,
+      "image": "https://images7.alphacoders.com/714/714040.jpg",
+      "title": "Kratos",
       "subTitle": "",
       "author": "2",
-      "date": "26-2-2023-18-35",
-      "body": "bladij sdhsidj sjijd",
+      "date": "27-2-2023-23-15",
+      "body": "DIOS D GUERRAAA",
       "tags": [
         2,
         3,
+        4,
+        5,
         6
       ],
       "likes": 0,
-      "subtitle": "oruebasjs"
+      "subtitle": "GOD OF WAR"
+    },
+    {
+      "id": 254,
+      "image": "https://images.unsplash.com/photo-1677541829506-2084c4bba14c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80",
+      "title": "Ricitos de oro",
+      "subTitle": "GATO CON BOTAS",
+      "author": "1",
+      "date": "28-2-2023-0-12",
+      "body": "roba comida",
+      "tags": [
+        1,
+        3,
+        5
+      ],
+      "likes": 0
     }
   ],
   "tags": [
@@ -236,6 +253,18 @@
       "comment": "Test comment on post #2",
       "postId": 2,
       "user": 3
+    },
+    {
+      "id": 759,
+      "comment": "probando",
+      "postId": "5",
+      "user": 1
+    },
+    {
+      "id": 922,
+      "comment": "la emely",
+      "postId": "5",
+      "user": 2
     }
   ],
   "authors": [

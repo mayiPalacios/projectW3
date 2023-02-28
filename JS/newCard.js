@@ -20,26 +20,25 @@ const cardObject = {
   likes: 0,
 };
 
-saveData.addEventListener("click", function() {
+saveData.addEventListener("click", function () {
   const idCont = parseInt(localStorage.getItem("lastID"));
   checkboxes.forEach((e) => {
     if (e.checked == true) {
       arrayTag.push(parseInt(e.value));
-    
     }
   });
   cardObject.tags = arrayTag;
   cardObject.title = titleInpt.value;
   cardObject.image = imgInpt.value;
-  cardObject.subtitle = subtitle.value;
+  cardObject.subTitle = subtitle.value;
   cardObject.body = bodyInpt.value;
-  cardObject.id = idCont+1;
+  cardObject.id = idCont + 1;
   cardObject.date = date();
   cardObject.author = selectAuthor.value;
   const currentCards = JSON.parse(localStorage.getItem("newCard"));
   const totalNewCards = [...(currentCards ?? []), cardObject];
   const newId = Math.floor(Math.random() * 1000);
-  
+
   localStorage.setItem("lastID", newId);
   localStorage.setItem("newCard", JSON.stringify(totalNewCards));
   location.reload();
@@ -57,4 +56,3 @@ function date() {
 
   return uDates;
 }
-

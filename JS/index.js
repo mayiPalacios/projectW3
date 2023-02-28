@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log({ localStoreNewData });
     localStoreNewData?.map((request) => {
       console.log({ request });
-      data.postCard(request);
+      data.postCard(request, "posts");
     });
-     localStorage.removeItem("newCard");
+    localStorage.removeItem("newCard");
   }
 });
 
@@ -35,22 +35,41 @@ let filter = {
   number: "",
 };
 
+let elementStart, limitElement;
+
+async function getLengthAPI() {
+  const apiLenght = await data.getPost("", "posts");
+  return apiLenght;
+}
+
+const createFeature = async () => {
+  elementStart = getLengthAPI() - 3;
+  limitElement = 3;
+  const apiFeature = await data.getDetails(
+    `_start=${elementStart}&_limit=${limitElement}`,
+    "posts"
+  );
+
+  /*  
+    const apiLimits = data.getDetails(`_=start=${}&_limit=${}`);*/
+};
+
 const makeContainer = async () => {
   const localStorageData = getData();
-  const data2 = await data.getPost(localStorageData.search,"posts");
+  const dataCopy = await data.getPost(localStorageData.search, "posts");
   const indexPublication = await factoryPost.chooseOptionPublication("single");
-  data2.forEach((element) => {
+  dataCopy.forEach((element) => {
     indexPublication.createPublication(element);
 
     /* createCard(element);*/
   });
   /* localStorage.setItem("lastID",data2[data2.length -1].posts.id);*/
-  localStorage.setItem("lastID", data2[data2.length - 1].id);
+  localStorage.setItem("lastID", Math.floor(Math.random() * 1000));
 };
 
 const debounce = (fn, delay) => {
   let timeoutID;
-  return function(...args) {
+  return function (...args) {
     if (timeoutID) {
       clearTimeout(timeoutID);
     }
@@ -62,7 +81,7 @@ const debounce = (fn, delay) => {
 };
 
 function UpdateFilters() {
-  filter.search = "?q=" + inptSearch.value;
+  filter.search = "q=" + inptSearch.value;
   filter.number = "";
 }
 
