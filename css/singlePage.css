@@ -89,11 +89,11 @@ footer {
 
 .btn__like {
     float: right;
-    margin-left: 45vw;
-    margin-top: 60vh;
+    margin-left: 24vw;
+    margin-top: 64vh;
     position: absolute;
     border: none;
-    background-color: rgba(29, 169, 240, 0.1);
+    background-color: transparent;
 }
 
 .btn__like img {
@@ -101,12 +101,26 @@ footer {
     border: none;
 }
 
+.btn__home img {
+    height: 10vh;
+    z-index: 10;
+}
+
+.btn__home {
+    float: right;
+    margin-left: 10vw;
+    margin-top: 66vh;
+    position: absolute;
+
+}
+
 .btn__trash {
     position: absolute;
-    margin-left: 52vw;
-    padding-top: 12px;
+    margin-left: 15vw;
+    padding-bottom: 14vh;
+    bottom: 0;
+    background: transparent;
     border: none;
-    background-color: rgba(29, 169, 240, 0.1);
 }
 
 .btn__trash:hover {
@@ -263,7 +277,10 @@ footer {
 }
 
 /*  */
-
+#select__user--comment {
+    height: 5vh;
+    width: 10vw;
+}
 
 #checkboxes ul {
     display: flex;
@@ -405,15 +422,160 @@ textarea {
 }
 
 .container__comments--values {
-    background-color: #fff;
-    height: 50vh;
+    background-color: pink;
     max-height: 50vh;
-
-
-
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
 .child__container--comment {
     background-color: pink;
     padding-bottom: 23px;
+
+}
+
+@media (max-width:1300px) {
+    .card {
+        width: 90vw;
+    }
+
+    #select__user--comment {
+        height: 5vh;
+        width: 20vw;
+    }
+
+    .comments {
+        width: 90vw;
+    }
+
+    .container__input--comments textarea {
+        width: 50vw;
+        height: 12vh;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn__trash {
+        margin-left: 17vw;
+        padding-bottom: 14vh;
+        background: transparent;
+    }
+
+    .btn__home {
+        margin-left: 11vw;
+    }
+
+    .btn__like {
+        margin-left: 26vw;
+    }
+
+    .comments {}
+
+
+
+}
+
+@media (max-width:1000px) {
+    .card {
+        width: 90vw;
+    }
+
+
+
+    .comments {
+        width: 60%;
+    }
+
+
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn__trash {
+        margin-left: 30vw;
+    }
+
+    .btn__home {
+        margin-left: 18vw;
+    }
+
+    .btn__like {
+        margin-left: 45vw;
+    }
+
+
+}
+
+@media (max-width:1000px) {
+    .card {
+        flex-direction: column;
+        height: 160vh;
+        gap: 0;
+    }
+
+    .comments {
+        width: 90%;
+    }
+
+    ul {
+        width: 40vw;
+        gap: 20px;
+    }
+
+    .container__left {
+        padding-left: 15vw;
+    }
+
+    .container__right {
+        padding-left: 15vw;
+        width: 60vw;
+        flex-wrap: nowrap;
+    }
+
+    .container__input--comments textarea {
+        width: 73vw;
+        height: 12vh;
+    }
+
+    #select__user--comment {
+        height: 5vh;
+        width: 20vw;
+    }
+
+    .container__input--comments {}
+
+    .container__input--comments .btn__comment {
+        width: 14vw;
+
+    }
+
+
+    .btn__edit {
+        top: 0;
+        margin-top: 155vh;
+        margin-left: 40vw;
+        position: absolute;
+    }
+
+    .btn__trash {
+        top: 0;
+        margin-left: 7vw;
+        margin-top: 155vh;
+    }
+
+    .btn__home {
+        margin-left: 25vw;
+        margin-top: 148vh;
+    }
+
+    .btn__like {
+        top: 0;
+        margin-top: 155vh;
+        margin-left: 60vw;
+    }
 }
