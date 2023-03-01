@@ -8,6 +8,7 @@ body {
     margin: 0;
     width: 100%;
     height: 100vh;
+
 }
 
 .container__logo img {
@@ -95,10 +96,16 @@ body {
 .btn__more--feature img {
     padding-top: 5px;
     font-size: 6px;
-    height: 50px;
+    height: 10px;
+    bottom: 0;
 }
 
-.card__feature img {
+.btn__more--feature {
+    bottom: 0;
+}
+
+
+.card__feature #img__post {
     width: 100%;
     height: 20vh;
     grid-area: 1 / 1 / 2 / 2;
@@ -111,10 +118,78 @@ body {
 
 }
 
+.container__container--feature {
+    width: 100%;
+    background-image: url("https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,h_513,w_336/dpr_2.0/ncom/My%20Nintendo%20Store/EN-US/MNS%20HOME/Characters/Ncom_1048x1600_MyN_chara_nav_bg");
+}
+
+.container__title--feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1__features {
+    color: #FCA205;
+    font-family: 'Lobster';
+
+}
+
+.h1__regular--section {
+    font-weight: 700;
+    color: rgb(72, 72, 72);
+    padding-left: 7vw;
+}
+
+hr {
+    padding-top: 12px;
+}
+
+.lineSpecialties {
+    position: relative;
+    display: inline-block;
+
+}
+
+.lineSpecialties::after,
+.lineSpecialties::before {
+    position: absolute;
+    content: '';
+    width: 22vw;
+    height: 0.4vh;
+    background-color: #FCA205;
+    top: 0.6em;
+}
+
+.lineSpecialties::before {
+    left: -23vw;
+}
+
+.lineSpecialties::after {
+    right: -23vw;
+}
+
+/*      */
 .container__feature {
     width: 90%;
     margin: 0 auto;
+    padding-top: 4vh;
+    padding-bottom: 12vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
+
+.card__feature .container__btn--title {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.card__feature .btn__more--feature img {
+    height: 6vh;
+}
+
+
 
 
 .parent {
@@ -216,4 +291,73 @@ body {
     cursor: pointer;
 }
 
-#select__tags {}
+#select__tags {
+    margin: 12px;
+    width: 10vw;
+}
+
+@media (max-width:1485px) {
+
+    .container__feature,
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #inpt__search {
+        width: 40vw;
+    }
+
+    #select__tags {
+        width: 15vw;
+    }
+
+
+}
+
+@media (max-width:1000px) {
+
+    .container__feature,
+    .parent {
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container__container--feature {
+        width: 100%;
+    }
+}
+
+@media (max-width:700px) {
+
+    .container__feature,
+    .parent {
+        width: 80%;
+
+    }
+
+    .card__feature,
+    .card {
+        width: 80vw;
+    }
+
+    .lineSpecialties::before {
+        left: -20vw;
+    }
+
+    .lineSpecialties::after {
+        right: -20vw;
+    }
+
+    .h1__features {
+        font-size: 1.5em;
+    }
+
+    .lineSpecialties::after,
+    .lineSpecialties::before {
+        width: 18vw;
+
+    }
+
+}

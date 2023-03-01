@@ -1,4 +1,4 @@
-const JSON_URL = "http://localhost:3000/";
+const JSON_URL = "https://uttermost-sulfuric-step.glitch.me/";
 const btnAlert = document.querySelector(".container__alert");
 
 export default class fetchs {

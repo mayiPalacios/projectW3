@@ -41,10 +41,14 @@ class singlePost extends publication {
 }
 
 class summaryPublication extends publication {
-  createPublication(data, tag, comments, users) {
+  createPublication(data, tag, comments, users, authorName) {
     const containerLeft = document.createElement("div");
+    containerLeft.classList.add("container__left");
     const containerRight = document.createElement("div");
+    containerRight.classList.add("container__right");
     const containerImg = document.createElement("div");
+    const childContainerComment = document.createElement("div");
+    childContainerComment.classList.add("child__container--comment");
     /*   div left     */
     const image = document.createElement("img");
     if (data.image == "") {
@@ -59,7 +63,8 @@ class summaryPublication extends publication {
 
     tag.forEach((element) => {
       let li = document.createElement("li");
-      let text = document.createTextNode(element);
+      let text = document.createElement("h6");
+      text.textContent = element;
       li.appendChild(text);
       ul.appendChild(li);
     });
@@ -74,14 +79,11 @@ class summaryPublication extends publication {
     const body = document.createElement("p");
     body.textContent = `${data[0].body}`;
     const author = document.createElement("h6");
-    author.textContent = `${data[0].author}`;
+    author.textContent = authorName;
     const date = document.createElement("h6");
     date.textContent = `${data[0].date}`;
     const btnLike = document.createElement("button");
     btnLike.classList.add("btn__like");
-    /* const iconLike = document.createElement("img");*/
-    /*iconLike.src = "https://cdn-icons-png.flaticon.com/512/2961/2961957.png";*/
-    /* btnLike.appendChild(iconLike);*/
 
     containerRight.appendChild(subti);
     containerRight.appendChild(body);
@@ -91,17 +93,17 @@ class summaryPublication extends publication {
     /*    comments          */
     comments.forEach((e) => {
       let commentsValues = document.createElement("h6");
-      commentsValues = document.createTextNode(e.comment);
+      commentsValues.textContent = e.comment;
       let userComments = document.createElement("h6");
       users.forEach((element) => {
         if (e.user == element.id) {
-          userComments = document.createTextNode(
-            element.name + " " + element.lastName
-          );
+          userComments.textContent = element.name + " " + element.lastName;
+          childContainerComment.appendChild(userComments);
+          childContainerComment.appendChild(commentsValues);
         }
       });
-      containerComments.appendChild(commentsValues);
-      containerComments.appendChild(userComments);
+
+      containerComments.appendChild(childContainerComment);
     });
 
     card.classList.add("card");
@@ -131,6 +133,7 @@ class featuredPost {
     } else {
       image.src = data.image;
     }
+    image.id = "img__post";
     infoBtn.appendChild(imgInf);
     contBtnTitle.appendChild(tittle);
     contBtnTitle.appendChild(infoBtn);

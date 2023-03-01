@@ -116,3 +116,29 @@ btnAlert.addEventListener("click", () => {
   btnAlertContainer.classList.remove("alert");
   localStorage.removeItem("filters");
 });
+
+selectTags.addEventListener("change", () => {
+  while (document.querySelector(".card") !== null) {
+    if (document.querySelector(".card") !== null) {
+      const card = document.querySelector(".card");
+      containerCards.removeChild(card);
+      continue;
+    } else {
+      break;
+    }
+  }
+  filterTag();
+});
+
+const filterTag = async () => {
+  const postTags = await data.getDetails("", "posts");
+  const tagsFactory = await factoryPost.chooseOptionPublication("single");
+
+  postTags.forEach((e) => {
+    e.tags.forEach((tag) => {
+      if (tag == selectTags.value) {
+        tagsFactory.createPublication(e);
+      }
+    });
+  });
+};
