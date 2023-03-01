@@ -5,7 +5,7 @@ export class factoryPublication {
     if (type == "single") {
       return new singlePost();
     }
-    if (type == "publication") {
+    if (type == "summaryPublic") {
       return new summaryPublication();
     }
     if (type == "feature") {
