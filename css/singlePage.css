@@ -20,10 +20,9 @@ main {
 }
 
 .card {
-    opacity: .5;
     height: 80vh;
     width: 60vw;
-    background-color: #1da9f0;
+    background-color: rgba(29, 169, 240, 0.6);
     border-radius: 1rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
     margin: 1.5rem;
@@ -72,6 +71,8 @@ footer {
 }
 
 .img__circle {
+    margin: 20px;
+    opacity: 1;
     width: 300px;
     height: 300px;
     border-radius: 150px;
@@ -92,7 +93,7 @@ footer {
     margin-top: 60vh;
     position: absolute;
     border: none;
-    background-color: #1da9f0;
+    background-color: rgba(29, 169, 240, 0.1);
 }
 
 .btn__like img {
@@ -102,8 +103,10 @@ footer {
 
 .btn__trash {
     position: absolute;
+    margin-left: 52vw;
+    padding-top: 12px;
     border: none;
-    background-color: #1da9f0;
+    background-color: rgba(29, 169, 240, 0.1);
 }
 
 .btn__trash:hover {
@@ -270,6 +273,38 @@ footer {
     float: left;
 }
 
+li h6 {
+    font-size: 1.1em;
+}
+
+.container__right {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30vw;
+}
+
+.container__right h2 {
+    font-size: 2em;
+}
+
+.container__left h2 {
+    font-size: 3em;
+    padding-left: 90px;
+}
+
+.container__right p {
+
+    font-size: 2em;
+}
+
+ul {
+    width: 20vw;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
 #checkboxes {
     margin: 0 auto;
     width: 70%;
@@ -353,7 +388,7 @@ textarea {
 .btn__edit {
     position: absolute;
     border: none;
-    background-color: #1da9f0;
+    background-color: rgba(29, 169, 240, 0.02);
     bottom: 0;
     margin-bottom: 13vh;
     margin-left: 1vw;
@@ -367,4 +402,18 @@ textarea {
     height: 12vh;
     border: none;
 
+}
+
+.container__comments--values {
+    background-color: #fff;
+    height: 50vh;
+    max-height: 50vh;
+
+
+
+}
+
+.child__container--comment {
+    background-color: pink;
+    padding-bottom: 23px;
 }

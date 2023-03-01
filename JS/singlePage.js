@@ -56,12 +56,14 @@ const makeContainerSinglePage = async () => {
   try {
     const getDetails = await data.getDetails("?id=" + id, "posts");
     const tags = await data.getDetails("", "tags");
+    const author = await data.getDetails("", "authors");
     const comments = await data.getDetails("", "comments");
     const users = await data.getDetails("", "users");
     const factoryGet = new factoryPublication();
-    const domCreate = await factoryGet.chooseOptionPublication("publication");
+    const domCreate = await factoryGet.chooseOptionPublication("summaryPublic");
     let arrayTags = [];
-    /*   console.log(getDetails[0].tags);*/
+    let authorThisPost;
+
     comments.forEach((e) => {
       if (e.postId == id) {
         arraycomments.push(e);
@@ -76,7 +78,19 @@ const makeContainerSinglePage = async () => {
       });
     });
 
-    domCreate.createPublication(getDetails, arrayTags, arraycomments, users);
+    author.forEach((author) => {
+      if (author.id == getDetails[0].author) {
+        authorThisPost = author.name + " " + author.lastName;
+      }
+    });
+
+    domCreate.createPublication(
+      getDetails,
+      arrayTags,
+      arraycomments,
+      users,
+      authorThisPost
+    );
   } catch (error) {
     console.log(error);
   }
@@ -88,6 +102,7 @@ btnComment.addEventListener("click", () => {
   newComment.user = parseInt(userComment.value);
   newComment.id = Math.floor(Math.random() * 1000);
   data.postCard(newComment, "comments");
+  setTimeout(() => location.reload(), 1000);
 });
 
 btnlike.addEventListener("click", () => {
@@ -123,7 +138,7 @@ alertCancelBtn.addEventListener("click", () => {
 alertAcceptBtn.addEventListener("click", () => {
   containerAlert.classList.remove("container__alert--active");
   removePost();
-  setTimeout(() => (location.href = "./index.html"), 100);
+  setTimeout(() => (location.href = "./index.html"), 1000);
 });
 
 const removePost = async () => {
@@ -140,6 +155,10 @@ editCancelBtn.addEventListener("click", () => {
 
 editAcceptBtn.addEventListener("click", () => {
   editPatchFunction();
+  setTimeout(() => {
+    containerEdit.classList.remove("container__alert--active");
+    location.reload();
+  }, 2000);
 });
 
 const editPatchFunction = async () => {
